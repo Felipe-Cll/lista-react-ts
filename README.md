@@ -1,6 +1,6 @@
 <h1 align="center">📋 Lista de Tarefas</h1>
 <p align="center">
-  <img src="/public/toReadme/Listagif.gif">
+  <img src="/public/toReadme/#.gif">
 </p>
 
 ## :books: Informações
