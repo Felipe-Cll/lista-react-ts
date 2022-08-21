@@ -4,10 +4,10 @@ type ContainerProps = {
     done: boolean;
 }
 
-export const Container = styled.div(({ done }: ContainerProps) => (
+export const Container = styled.div<ContainerProps> //solução problema
     `
     display: flex;
-    background-color: #20212C;
+    background-color: ${props => props.theme.colors.secondary};
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -20,8 +20,7 @@ export const Container = styled.div(({ done }: ContainerProps) => (
     }
 
     label {
-        color: #CCC;
-        text-decoration: ${done ? 'line-through' : 'initial'};
+        color: ${props => props.theme.colors.textColor};
+        text-decoration: ${props => props.done ? 'line-through' : 'initial'};
     }
-`
-));
+`;

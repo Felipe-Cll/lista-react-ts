@@ -3,8 +3,19 @@ import * as C from './App.styles';
 import { Item } from './types/Item';
 import { ListItem } from './components/ListItem';
 import { AddArea } from './components/AddArea';
+import { Header } from './components/Header';
+import { ThemeProvider } from 'styled-components';
+import dark from './themes/dark';
+import light from './themes/light';
+
 
 const App = () => {
+  const [theme, setTheme] = useState(light);
+
+  const onChangeTheme = () => {
+    setTheme(theme.name == 'light' ? dark : light);
+  }
+
   const [list, setList] = useState<Item[]>([]);
 
   const handleAddTask = (taskName: string) => {
@@ -30,18 +41,18 @@ const App = () => {
   }
   
   return (
-    <C.Container>
-      <C.Area>
-        <C.Header>Lista de Tarefas</C.Header>
-
-        <AddArea onEnter={handleAddTask} />
-
-        {list.map((item, index) => (
-          <ListItem key={index} item={item} onChange={handleTaskChange} />
-        ))}
-
-      </C.Area>
-    </C.Container>
+    <ThemeProvider theme={theme}>
+      <C.Container>
+        <C.Area>
+          <Header onChangeTheme={onChangeTheme} />
+          <C.Title>Lista de Tarefas</C.Title>
+          <AddArea onEnter={handleAddTask} />
+          {list.map((item, index) => (
+            <ListItem key={index} item={item} onChange={handleTaskChange} />
+          ))}
+        </C.Area>
+      </C.Container>
+    </ThemeProvider>
   );
 }
 

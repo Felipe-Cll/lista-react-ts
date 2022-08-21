@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    border: 1px solid #555;
+    border: 2px solid #007acc;
     border-radius: 15px;
     padding: 10px;
     margin: 20px 0;
@@ -16,7 +16,7 @@ export const Container = styled.div`
         border: 0px;
         background: transparent;
         outline: 0;
-        color: #FFF;
+        color: ${props => props.theme.colors.textColor};
         font-size: 18px;
         flex: 1;
     }
