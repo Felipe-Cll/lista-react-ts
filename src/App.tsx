@@ -3,6 +3,10 @@ import * as C from './App.styles';
 import { Item } from './types/Item';
 import { ListItem } from './components/ListItem';
 import { AddArea } from './components/AddArea';
+import { Header } from './components/Header/index';
+import GlobalStyles from './styles/global';
+import { CustomThemeProvider } from './context';
+
 
 const App = () => {
   const [list, setList] = useState<Item[]>([]);
@@ -30,18 +34,25 @@ const App = () => {
   }
   
   return (
-    <C.Container>
-      <C.Area>
-        <C.Header>Lista de Tarefas</C.Header>
+    
+    <CustomThemeProvider>
+      <C.Container>
+      <GlobalStyles />  
+        <C.Area>
+          <Header />
+          <C.TitleArea>
+            <h1>Lista de Tarefas</h1>
+          </C.TitleArea>
 
-        <AddArea onEnter={handleAddTask} />
+          <AddArea onEnter={handleAddTask} />
 
-        {list.map((item, index) => (
-          <ListItem key={index} item={item} onChange={handleTaskChange} />
-        ))}
+          {list.map((item, index) => (
+            <ListItem key={index} item={item} onChange={handleTaskChange} />
+          ))}
 
-      </C.Area>
-    </C.Container>
+        </C.Area>
+      </C.Container>
+    </CustomThemeProvider>
   );
 }
 
