@@ -12,6 +12,7 @@ export const Container = styled.div<ContainerProps> //solução problema
     border-radius: 10px;
     margin-bottom: 10px;
     align-items: center;
+    word-break: break-all;
 
     input {
         width: 25px;

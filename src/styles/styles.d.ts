@@ -11,6 +11,8 @@ declare module 'styled-components' {
             text: string
             backgroundText: string
             borderAll: string
+            iconAdd: string
+            scrollTh: string
 
             button: string
             textButton: string

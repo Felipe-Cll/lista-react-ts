@@ -7,9 +7,12 @@ export const Container = styled.div`
     margin: 20px 0;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     .image {
         margin-right: 5px;
+        padding: 5px 0 0 0;
+        color: ${props => props.theme.colors.iconAdd};
     }
 
     input {
@@ -17,7 +20,11 @@ export const Container = styled.div`
         background: transparent;
         outline: 0;
         color: ${props => props.theme.colors.text};
-        font-size: 18px;
+        font-size: 1rem;
         flex: 1;
+
+        @media (max-width: 327px) {
+            font-size: 0.93rem;
+        }
     }
 `;

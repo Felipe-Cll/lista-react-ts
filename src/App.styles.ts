@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    padding: 100px 20px;
+    padding: 60px 20px;
     min-height: 100vh;
 `;
 
@@ -21,6 +21,17 @@ export const TitleArea = styled.h1`
     text-align: center;
     font-size: 1.5rem;
     border-bottom: 2px solid ${props => props.theme.colors.borderAll};
+
+    @media (max-width: 480px) {
+        font-size: 1.2rem;
+    }
+    @media (max-width: 405px) {
+        font-size: 1rem;
+    }
+    @media (max-width: 332px) {
+        font-size: 0.9rem;
+    }
+    
 `;
 
 export const Icons = styled.div`
