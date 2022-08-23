@@ -10,7 +10,7 @@ const ThemeContext = createContext<ThemeContextData>({} as ThemeContextData)
 export const useTheme = () => useContext(ThemeContext);
 
 export const CustomThemeProvider = ({ children } : MainProps) => {
-    const [theme, setTheme] =useState<DefaultTheme>(light)
+    const [theme, setTheme] = useState<DefaultTheme>(light)
 
     const toggleTheme = useCallback(() => {
         if (theme.title === 'light') {
