@@ -20,6 +20,10 @@ export const Nav = styled.div`
         background-color: #FFD60a;
         color: #161a1d;
     }
+
+    img {
+        cursor: pointer;
+    }
 `;
 
 export const Logos = styled.div`

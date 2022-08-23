@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    padding: 100px;
+    padding: 100px 20px;
     min-height: 100vh;
 `;
 
@@ -20,7 +20,7 @@ export const TitleArea = styled.h1`
     color: ${props => props.theme.colors.textTitle};
     text-align: center;
     font-size: 1.5rem;
-    border-bottom: 2px solid #007acc;
+    border-bottom: 2px solid ${props => props.theme.colors.borderAll};
 `;
 
 export const Icons = styled.div`

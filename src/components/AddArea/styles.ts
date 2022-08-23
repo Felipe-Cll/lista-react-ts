@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    border: 2px solid #007acc;
+    border: 2px solid ${props => props.theme.colors.borderAll};
     border-radius: 15px;
     padding: 10px;
     margin: 20px 0;
