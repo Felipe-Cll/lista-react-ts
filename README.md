@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+<h1 align="center">📋 Lista de Tarefas</h1>
+<p align="center">
+  <img width="800" src="/public/toReadme/#.gif">
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## :books: Informações
+Um projeto simples para selecionar tudo o que você precisa e deseja concluir em um dia, o qual a aula foi orientada pelo Bonieky Lacerda. Nele foi utilizado react com typescript e funcionalidades com styled components.
 
-## Available Scripts
+## :crossed_swords: Desafio
+O componente estava modificando apenas o 'State'. O desafio era fazer com que ao clicar no 'checkbox' o valor boolean também seja modificado.
 
-In the project directory, you can run:
+### Solução
+Etapa 1:  No arquivo 'App.tsx' tinha que criar uma função que recebesse os itens "id" e "done". Em seguida, a utilização do loop(for...in) para buscar informação dentro da lista(newList) exigindo que, se o "id" for idêntico então receberá "done", após isso a função atualizará a lista.
+<br/><br/>
 
-### `npm start`
+```
+const handleTaskChange = (id: number, done: boolean) => {
+    let newList = [...list];
+    for(let i in newList) {
+      if(newList[i].id === id) {
+        newList[i].done = done;
+      }
+    }
+    setList(newList);
+  }
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br/>Etapa 2: Por fim, na pasta 'ListItem', no arquivo 'index.tsx' deverá remover a importação do "useState", adicionar o "onChange" para receber o "id" e "done" vazio e alterar o que será exportado.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+type Props = {
+    item: Item,
+    onChange: (id: number, done: boolean) => void
+}
+export const ListItem = ({item, onChange}: Props) => {
+    return (
+        <C.Container done={item.done}>
+            <input type="checkbox" checked={item.done} onChange={e => onChange(item.id, e.target.checked)} />
+            <label>{item.name} - {item.done.toString()}</label>
+        </C.Container>
+    );
+}
+```
+Para informações mais detalhadas clique em: <a href="https://github.com/LipeCll/lista-react-ts/commit/e5bcc190a5f03b1ccab07560fee62e9d0942421e">Commit solução</a>
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## :pushpin: Tecnologias
+<ul>
+  <li><a href="https://pt-br.reactjs.org/docs/getting-started.html">React</a></li>
+  <li><a href="https://www.typescriptlang.org/docs/">Typescript</a></li>
+  <li><a href="https://styled-components.com/docs">Styled Components</a></li>
+</ul>
