@@ -31,26 +31,4 @@ export const TitleArea = styled.h1`
     @media (max-width: 332px) {
         font-size: 0.9rem;
     }
-    
-`;
-
-export const Icons = styled.div`
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-
-    button {
-        border: none;
-        padding: 0.6rem 1rem;
-        border-radius: 0.3rem;
-        font-size: 1rem;
-        font-weight: bold;
-        cursor: pointer;
-        background-color: ${props => props.theme.colors.button};
-        color: ${props => props.theme.colors.textButton};
-    }
-`;
-
-export const Logos = styled.div`
-
 `;

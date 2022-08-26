@@ -2,10 +2,9 @@ import styled from 'styled-components';
 
 type ContainerProps = {
     done: boolean;
-}
+};
 
-export const Container = styled.div<ContainerProps> //solução problema
-    `
+export const Container = styled.div<ContainerProps>`
     display: flex;
     background-color: ${props => props.theme.colors.backgroundText};
     padding: 10px;

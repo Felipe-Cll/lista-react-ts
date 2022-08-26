@@ -8,7 +8,6 @@ export const Nav = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 
     button {
         border: none;
@@ -26,6 +25,4 @@ export const Nav = styled.div`
     }
 `;
 
-export const Logos = styled.div`
-
-`;
+export const Logos = styled.div``;

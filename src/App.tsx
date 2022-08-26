@@ -1,12 +1,11 @@
-import { useState } from 'react';
 import * as C from './App.styles';
-import { Item } from './types/Item';
-import { ListItem } from './components/ListItem';
-import { AddArea } from './components/AddArea';
-import { Header } from './components/Header/index';
+import { useState } from 'react';
 import GlobalStyles from './styles/global';
 import { CustomThemeProvider } from './context';
-
+import { Header } from './components/Header/index';
+import { AddArea } from './components/AddArea';
+import { Item } from './types/Item';
+import { ListItem } from './components/ListItem';
 
 const App = () => {
   const [list, setList] = useState<Item[]>([]);
@@ -19,9 +18,7 @@ const App = () => {
       done: false
     });
     setList(newList);
-  }
-
-  // Desafio
+  };
 
   const handleTaskChange = (id: number, done: boolean) => {
     let newList = [...list];
@@ -31,29 +28,25 @@ const App = () => {
       }
     }
     setList(newList);
-  }
+  };
   
   return (
-    
     <CustomThemeProvider>
       <C.Container>
       <GlobalStyles />  
         <C.Area>
-          <Header />
+        <Header />
           <C.TitleArea>
             <h1>Lista de Tarefas</h1>
           </C.TitleArea>
-
           <AddArea onEnter={handleAddTask} />
-
           {list.map((item, index) => (
             <ListItem key={index} item={item} onChange={handleTaskChange} />
           ))}
-
         </C.Area>
       </C.Container>
     </CustomThemeProvider>
   );
-}
+};
 
 export default App;

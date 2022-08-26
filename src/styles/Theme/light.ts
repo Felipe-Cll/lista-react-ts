@@ -1,8 +1,7 @@
 import { DefaultTheme } from "styled-components";
 
 export const light: DefaultTheme = {
-    title: 'light',
-    iconTheme: "#000",
+    name: 'light',
         colors: {
             primary: '#007acc',
             secondary: '#fff',
@@ -11,9 +10,6 @@ export const light: DefaultTheme = {
             backgroundText: '#f2f2f2',
             borderAll: '#007acc',
             iconAdd: '#007acc',
-            scrollTh: '#a3a3a3',
-
-            button: '#ffd60a',
-            textButton: '#000'
+            scrollTh: '#a3a3a3'
         }
-}
+};

@@ -4,7 +4,7 @@ import { Item } from '../../types/Item'
 type Props = {
     item: Item,
     onChange: (id: number, done: boolean) => void
-}
+};
 
 export const ListItem = ({item, onChange}: Props) => {
     return (
@@ -13,4 +13,4 @@ export const ListItem = ({item, onChange}: Props) => {
             <label>{item.name} </label>
         </C.Container>
     );
-}
+};

@@ -2,8 +2,7 @@ import 'styled-components';
 
 declare module 'styled-components' {
     export interface DefaultTheme {
-        title: string
-        iconTheme: string
+        name: string
         colors: {
             primary: string
             secondary: string
@@ -13,9 +12,6 @@ declare module 'styled-components' {
             borderAll: string
             iconAdd: string
             scrollTh: string
-
-            button: string
-            textButton: string
         }
     }
 }
