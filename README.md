@@ -1,10 +1,13 @@
 <h1 align="center">📋 Lista de Tarefas</h1>
 <p align="center">
-  <img width="800" src="/public/toReadme/#.gif">
+  <img width="500" src="/public/toReadme/Listagif.gif">
 </p>
 
 ## :books: Informações
-Um projeto simples para selecionar tudo o que você precisa e deseja concluir em um dia, o qual a aula foi orientada pelo Bonieky Lacerda. Nele foi utilizado react com typescript e funcionalidades com styled components.
+Um projeto simples para selecionar tudo o que você precisa e deseja concluir em um dia, o qual a aula foi orientada pelo Bonieky Lacerda. Também há uma função para alteração entre temas "light" ou "<s>dark</s> dracula" inspirado em uma das extensões mais usadas no Visual Studio Code. Neste projeto foi utilizado react com typescript e funcionalidades com styled components.
+<ul>
+  <li>Para acessar o site: clique em <a href="https://felipe-cll.github.io/lista-react-ts/" target="_blank">To-do</a></li>
+</ul>
 
 ## :crossed_swords: Desafio
 O componente estava modificando apenas o 'State'. O desafio era fazer com que ao clicar no 'checkbox' o valor boolean também seja modificado.
