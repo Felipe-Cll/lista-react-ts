@@ -52,3 +52,6 @@ Para informações mais detalhadas clique em: <a href="https://github.com/LipeCl
   <li><a href="https://www.typescriptlang.org/docs/">Typescript</a></li>
   <li><a href="https://styled-components.com/docs">Styled Components</a></li>
 </ul>
+
+## :balance_scale: Licença
+Consulte o arquivo <a href="https://github.com/Felipe-Cll/lista-react-ts/blob/master/LICENSE" target="_blank">LICENSE</a> para obter mais detalhes.
