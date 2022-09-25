@@ -10,7 +10,7 @@ export const AddArea = ({ onEnter }: Props) => {
     const [inputText, setInputText] = useState('');
 
     const handleKeyUp = (e: KeyboardEvent) => {
-        if(e.code === 'Enter' && inputText !== '') {
+        if((e.code === 'Enter' || e.code === 'NumpadEnter') && inputText !== '') {
             onEnter(inputText);
             setInputText('');
         }
@@ -19,7 +19,7 @@ export const AddArea = ({ onEnter }: Props) => {
     return (
         <C.Container>
             <div className='image'><IoMdAddCircle fontSize={26} /></div>
-            <input 
+            <input
                 type="text" 
                 placeholder='Adicione uma tarefa' 
                 value={inputText} 
